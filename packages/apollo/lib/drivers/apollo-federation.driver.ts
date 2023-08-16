@@ -39,12 +39,12 @@ export class ApolloFederationDriver extends ApolloBaseDriver {
 
     await super.start(options);
 
-    if (options.installSubscriptionHandlers || options.subscriptions) {
-      // TL;DR <https://github.com/apollographql/apollo-server/issues/2776>
-      throw new Error(
-        'No support for subscriptions yet when using Apollo Federation',
-      );
-    }
+    // if (options.installSubscriptionHandlers || options.subscriptions) {
+    //   // TL;DR <https://github.com/apollographql/apollo-server/issues/2776>
+    //   throw new Error(
+    //     'No support for subscriptions yet when using Apollo Federation',
+    //   );
+    // }
   }
 
   public generateSchema(options: ApolloDriverConfig): Promise<GraphQLSchema> {
